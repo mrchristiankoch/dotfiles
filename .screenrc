@@ -28,16 +28,17 @@ hardstatus string "%{= KW}%-w%{= rW}%n %t%{-}%+w %-= %m/%d %c:%s"
 #bind 'R' screen -t sunfire16 ssh s1554463@sunfire16
 bind 'q' quit
 
+# configure tabs/terminals
 screen -t shell 0 
-screen -t dust 1 ssh ck@dust 
-screen -t punch 2 ssh ck@punch
-screen -t lanfear 4 ssh ck@lanfear
+screen -t host 1 ssh host  
+screen -t host 2 ssh host2 
+screen -t host 4 ssh host3 
 
 #chdir /hr
 #screen -t acer 0
-#screen -t kw64 1 ssh root@132.234.103.72 -t 'screen -d -RR kw64'
-#screen -t spl2 2 ssh root@132.234.103.113 -t 'screen -d -RR spl2'
-#screen -t sunfire 3 ssh s1554463@132.234.222.1 -t 'screen -d -RR spl'
+#screen -t kw64 1 ssh root@1.1.1.1 -t 'screen -d -RR kw64'
+#screen -t spl2 2 ssh root@1.1.1.1 -t 'screen -d -RR spl2'
+#screen -t sunfire 3 ssh s1554463@1.1.1.1 -t 'screen -d -RR spl'
 
 
 

@@ -1,40 +1,23 @@
+# Basic Settings
 
-# C-a :source .screenrc
-
+altscreen on
+defutf8 on
+defbce on
+defscrollback 10000
+term xterm-256color
 termcapinfo xterm* ti@:te@
 startup_message off
 vbell off
-autodetach on
-altscreen on
-shelltitle "$ |bash"
-defscrollback 10000
-defutf8 on
 nonblock on
 
-#escape ``
-#escape `e
-
-# BIND ESCAPE TO F11!
-# bindkey -k F1 command
-
-hardstatus alwayslastline                                                                                                                          
-
+# Status Bar
+hardstatus alwayslastline
 hardstatus string "%{= KW}%-w%{= rW}%n %t%{-}%+w %-= %m/%d %c:%s"
-#bind 'R' screen ssh s1554463@sunfire16
-#bind 'R' screen -t sunfire16 ssh s1554463@sunfire16
-bind 'q' quit
-
-# configure tabs/terminals
-screen -t shell 0 
-screen -t host 1 ssh host  
-screen -t host 2 ssh host2 
-screen -t host 4 ssh host3 
-
-#chdir /hr
-#screen -t acer 0
-#screen -t kw64 1 ssh root@1.1.1.1 -t 'screen -d -RR kw64'
-#screen -t spl2 2 ssh root@1.1.1.1 -t 'screen -d -RR spl2'
-#screen -t sunfire 3 ssh s1554463@1.1.1.1 -t 'screen -d -RR spl'
 
 
-
+# Set up some windows
+screen -t shell 0
+screen -t shell 1
+screen -t shell 2
+screen -t nms01 3 ssh -t nms1
+screen -t nms01 4 ssh -t nms1

@@ -1,0 +1,23 @@
+# Basic Settings
+
+altscreen on
+defutf8 on
+defbce on
+defscrollback 10000
+term xterm-256color
+termcapinfo xterm* ti@:te@
+startup_message off
+vbell off
+nonblock on
+
+# Status Bar
+hardstatus alwayslastline
+hardstatus string "%{= KW}%-w%{= rW}%n %t%{-}%+w %-= %m/%d %c:%s"
+
+
+# Set up some windows
+screen -t shell 0
+screen -t shell 1
+screen -t shell 2
+screen -t nms01 3 ssh -t nms1
+screen -t nms01 4 ssh -t nms1
